@@ -7,6 +7,8 @@ spec:
   data:
     - remoteRef:
         conversionStrategy: Default
+        decodingStrategy: None
+        metadataPolicy: None
         key: github-token-rhdh
         property: GITHUB_TOKEN
       secretKey: GITHUB_TOKEN

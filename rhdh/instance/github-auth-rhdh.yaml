@@ -7,11 +7,15 @@ spec:
   data:
     - remoteRef:
         conversionStrategy: Default
+        decodingStrategy: None
+        metadataPolicy: None
         key: github-auth-rhdh
         property: CLIENT_ID
       secretKey: GITHUB_APP_CLIENT_ID
     - remoteRef:
         conversionStrategy: Default
+        decodingStrategy: None
+        metadataPolicy: None
         key: github-auth-rhdh
         property: CLIENT_SECRET
       secretKey: GITHUB_APP_CLIENT_SECRET
