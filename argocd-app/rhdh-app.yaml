@@ -11,8 +11,8 @@ spec:
   sources:
   - repoURL: git@github.com:StinkyBenji/rhdh-playground.git
     path: rhdh/operator
-  # - repoURL: git@github.com:StinkyBenji/rhdh-playground.git
-  #   path: rhdh/instance
+  - repoURL: git@github.com:StinkyBenji/rhdh-playground.git
+    path: rhdh/instance
   syncPolicy:
     automated:
       prune: true
