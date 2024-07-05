@@ -1,0 +1,20 @@
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: github-token-rhdh
+  namespace: rhdh-operator
+spec:
+  data:
+    - remoteRef:
+        conversionStrategy: Default
+        key: github-token-rhdh
+        property: GITHUB_TOKEN
+      secretKey: GITHUB_TOKEN
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: vault-backend
+  target:
+    creationPolicy: Owner
+    deletionPolicy: Retain
+    name: github-token-rhdh

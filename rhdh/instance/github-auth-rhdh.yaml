@@ -1,0 +1,25 @@
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: github-auth-rhdh
+  namespace: rhdh-operator
+spec:
+  data:
+    - remoteRef:
+        conversionStrategy: Default
+        key: github-auth-rhdh
+        property: CLIENT_ID
+      secretKey: GITHUB_APP_CLIENT_ID
+    - remoteRef:
+        conversionStrategy: Default
+        key: github-auth-rhdh
+        property: CLIENT_SECRET
+      secretKey: GITHUB_APP_CLIENT_SECRET
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: vault-backend
+  target:
+    creationPolicy: Owner
+    deletionPolicy: Retain
+    name: github-auth-rhdh
